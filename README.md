@@ -104,10 +104,10 @@ To contain the threat and prevent further encryption, take the following actions
 ## 4. Documentation
 Findings:
 
-- PowerShell script `portscan.ps1` executed by user `br00klyn`
-- Internal port scanning activity detected
-- Excessive failed internal connection attempts from **cyberclaw-vm**
-- Consistent with port scanning/reconnaissance
+- Ransomware execution confirmed via PowerShell invocation from command shell.
+- File staging behavior observed in Desktop and Temp directories.
+- Execution chain validated through correlated process and file telemetry.
+- System compromise contained and remediated through isolation and reimaging.
   
 ---
 
