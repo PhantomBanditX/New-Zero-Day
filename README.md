@@ -88,11 +88,16 @@ Findings: The attack chain: `cmd.exe` launched `powershell.exe` with executi
 
 ## 3. Response
 
-This activity was not anticipated or authorized by administrators. The device was therefore immediately isolated, and a malware scan was initiated.
+To contain the threat and prevent further encryption, take the following actions:
 <br><br>
 <img width="635" alt="Image" src="https://github.com/user-attachments/assets/dd5770db-ad54-4a7d-9b25-d727cb5d1d94" />
 <br><br>
-Findings: The malware scan returned no findings. However, as a precautionary measure, the affected device was isolated and a support ticket was raised to reimage and rebuild the system. The device remains in an isolated state.
+
+- Immediately isolate `cyberclaw-vm` from the network to prevent lateral movement or further malicious activity.
+- Terminate any active `powershell.exe` processes initiated by `cmd.exe`, as they are tied to the malicious execution chain.
+- Remove `C:\ProgramData\pwncrypt.ps1` and all related ransomware artifacts from the system.
+- Reimage or rebuild `cyberclaw-vm` to a **known-good baseline** to ensure full eradication and integrity restoration.
+
 
 ---
 
