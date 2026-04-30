@@ -31,9 +31,9 @@ A recently discovered ransomware variant called `PwnCrypt` has been making headl
 
 ## 2. Detection & Analysis
 
-### **Connection Failure Review**
+### **Indicator of Compromise (IOC) Investigation – PwnCrypt**
 
-Inspected file system activity for pwncrypt IoCs.
+Performed file system analysis to identify and validate PwnCrypt indicators of compromise (IOCs).
 <br><br>
 ```kql
 let PatientZero  = "cyberclaw-vm";
