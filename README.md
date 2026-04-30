@@ -120,8 +120,7 @@ Findings:
 
 ---
 ## 🧾Summary                   
-An investigation into `cyberclaw-vm` identified an abnormal volume of failed internal connection attempts to itself and neighboring hosts. The pattern of activity was consistent with internal port scanning behavior and systematic probing of multiple systems. A PowerShell script `(portscan.ps1)` was executed by user **br00klyn** during the same timeframe as the suspicious activity. No malware was detected, but the host was isolated and scheduled for rebuild as a precaution.
+A ransomware variant, **PwnCrypt**, was detected on the host `cyberclaw-vm` using a PowerShell-based payload that encrypted files located in `C:\Users\Public\Desktop`. The investigation revealed files being created on the Desktop and rapidly renamed in the Temp directory with the `.pwncrypt` extension. Telemetry also showed `cmd.exe` launching `powershell.exe` with the **-ExecutionPolicy Bypass** flag to execute a script from `C:\ProgramData\pwncrypt.ps1`. The affected system was immediately isolated, malicious artifacts were removed, and the host was reimaged to restore a clean state.
 
----
 ## References
 - [NIST SP 800-61r3](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf)
