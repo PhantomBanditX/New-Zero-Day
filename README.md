@@ -113,10 +113,10 @@ Findings:
 
 ## 5. Improvement
 
-- Implement PowerShell Security Controls
-- Deploy Application Control (AppLocker or WDAC)
-- Implement Network Segmentation & Asset Hygiene
-- Establish Basic User Awareness Training
+- Implement Ransomware Detection & Blocking (PowerShell execution and `.pwncrypt` file activity)
+- Enable Continuous Endpoint Monitoring (`cmd.exe` → `powershell.exe` and abnormal file renaming)
+- Restrict PowerShell Execution (block or tightly control -ExecutionPolicy Bypass)
+- Enable Detailed Security Logging (process creation, script execution, and file system changes)
 
 ---
 ## 🧾Summary                   
