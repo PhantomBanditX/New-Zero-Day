@@ -45,7 +45,8 @@ DeviceFileEvents
 
 <img alt="Image" src="https://github.com/user-attachments/assets/fe205cae-78aa-4162-ab61-63c870e87ada" />
 <br><br>
-
+<img alt="Image" src="https://github.com/user-attachments/assets/e7764953-ab6e-44e2-901d-75b357bf8c23" />
+<br><br>
 Findings: Files created on Desktop, then renamed in Temp within one second.
 
 ---
@@ -63,32 +64,11 @@ DeviceProcessEvents
 | project Timestamp, DeviceName, ActionType, FileName, FolderPath, InitiatingProcessFileName, InitiatingProcessCommandLine 
 ```
 <img alt="Image" src="https://github.com/user-attachments/assets/61dc43d5-4aaf-4813-a802-4dd91d92ee8d" />
-<br><br>
+
+#### `Timestamp captured: 2026-04-26T01:13:33.1636981Z`
 
 Findings: The attack chain: `cmd.exe` launched `powershell.exe` with execution policy bypass to run `C:\programdata\pwncrypt.ps1`, confirming the ransomware's delivery mechanism.
 
----
-
-### **Anomalous behavior**
-
-I reviewed the DeviceProcessEvents table to identify any suspicious activity occurring around the time the port scan began.
-<br><br>
-```kql
-let VMName = "cyberclaw-vm";
-let specificTime = datetime(2026-04-22T00:06:57.8028463Z);
-DeviceProcessEvents
-| where Timestamp between ((specificTime - 10m) .. (specificTime + 10m))
-| where DeviceName == VMName
-| order by Timestamp desc
-| project Timestamp, FileName, InitiatingProcessCommandLine, AccountName
-```
-
-<img alt="Image" src="https://github.com/user-attachments/assets/68c7cf18-4234-4ba8-89a8-a3439880c789" />
-<br><br>
-
-Findings: A PowerShell script named `portscan.ps1` was launched by the **br00klyn** account at `2026-04-22T00:06:57.8028463Z.`
-
-#### `Timestamp captured: 2026-04-22T00:06:57.8028463Z`
 ---
 
 ### **MITRE ATT&CK Mapping: Tactics, Techniques, and Procedures (TTPs)**
