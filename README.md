@@ -90,7 +90,7 @@ Findings: The attack chain: `cmd.exe` launched `powershell.exe` with executi
 
 This activity was not anticipated or authorized by administrators. The device was therefore immediately isolated, and a malware scan was initiated.
 <br><br>
-<img width="925" height="608" alt="Image" src="https://github.com/user-attachments/assets/dd5770db-ad54-4a7d-9b25-d727cb5d1d94" />
+<img width="635" alt="Image" src="https://github.com/user-attachments/assets/dd5770db-ad54-4a7d-9b25-d727cb5d1d94" />
 <br><br>
 Findings: The malware scan returned no findings. However, as a precautionary measure, the affected device was isolated and a support ticket was raised to reimage and rebuild the system. The device remains in an isolated state.
 
