@@ -26,7 +26,6 @@ A recently discovered ransomware variant called `PwnCrypt` has been making headl
 - **Cloud Environment:** Microsoft Azure (VM-Windows target machine)
 - **Threat Detection Platform:** Microsoft Defender for Endpoint (MDE)
   
-
 ----
 
 ## 2. Detection & Analysis
@@ -51,9 +50,9 @@ Findings: Files created on Desktop, then renamed in Temp within one second.
 
 ---
 
-### **Network Forensics**
+### **IOC & Process Activity Analysis**
 
-Reviewed process activity for pwncrypt-related execution.
+Reviewed process activity and file system behavior to identify PwnCrypt indicators of compromise (IOCs).
 <br><br>
 ```kql
 let PatientZero  = "cyberclaw-vm";
@@ -83,7 +82,6 @@ Findings: The attack chain: `cmd.exe` launched `powershell.exe` with executi
 
 - [T1027 – Obfuscated/Hidden Files and Information](https://attack.mitre.org/techniques/T1027/)
 
-
 ---
 
 ## 3. Response
@@ -97,7 +95,6 @@ To contain the threat and prevent further encryption, take the following actions
 - Terminate any active `powershell.exe` processes initiated by `cmd.exe`, as they are tied to the malicious execution chain.
 - Remove `C:\ProgramData\pwncrypt.ps1` and all related ransomware artifacts from the system.
 - Reimage or rebuild `cyberclaw-vm` to a **known-good baseline** to ensure full eradication and integrity restoration.
-
 
 ---
 
