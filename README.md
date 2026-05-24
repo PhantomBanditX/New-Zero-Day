@@ -1,4 +1,5 @@
 # New Zero-Day
+<img width="900" height="540" alt="Image" src="https://github.com/user-attachments/assets/2809d1f9-e3f4-492e-b44c-6156e6ee892a" />
 
 ## 1. Preparation
 
