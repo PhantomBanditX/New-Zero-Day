@@ -88,9 +88,9 @@ Findings: The attack chain: `cmd.exe` launched `powershell.exe` with executi
 ## 3. Response
 
 To contain the threat and prevent further encryption, take the following actions:
-<br><br>
-<img width="635" alt="Image" src="https://github.com/user-attachments/assets/dd5770db-ad54-4a7d-9b25-d727cb5d1d94" />
-<br><br>
+<p\>
+<p align="center"> <img width="635" alt="Image" src="https://github.com/user-attachments/assets/dd5770db-ad54-4a7d-9b25-d727cb5d1d94" /> </p>
+<p>
 
 - Immediately isolate `cyberclaw-vm` from the network to prevent lateral movement or further malicious activity.
 - Terminate any active `powershell.exe` processes initiated by `cmd.exe`, as they are tied to the malicious execution chain.
