@@ -1,4 +1,4 @@
-# New Zero-Day
+# Operation PwnCrypt: Zero-Day Exploit Detection & Incident Response
 <p align="center"> <img width="900" height="540" alt="Image" src="https://github.com/user-attachments/assets/2809d1f9-e3f4-492e-b44c-6156e6ee892a" /> </p>
 
 ## 1. Preparation
